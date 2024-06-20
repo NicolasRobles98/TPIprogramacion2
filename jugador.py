@@ -1,10 +1,14 @@
 from usuario import Usuario
 
 class Player(Usuario):
-    def __init__(self, nombre,id):
+    
+    id_counter = 1
+ 
+    def __init__(self, nombre):
         super().__init__(nombre)
         self._puntos = 0
-        self._id = id
+        self._id = Player.id_counter
+        Player.id_counter += 1 
 
     @property
     def puntos(self):
@@ -18,10 +22,9 @@ class Player(Usuario):
     def id(self):
         return self._id
     
-    @id.setter
-    def id(self,id_nuevo):
-        self._id = id_nuevo
-
-    def modificar_puntos(self, valor):
+    def agregar_puntos(self, valor):
         self.puntos = self.puntos + valor
         return self.puntos
+    
+    
+    

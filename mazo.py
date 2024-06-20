@@ -1,28 +1,29 @@
 import random
 from carta import Carta
-cantidad_cartas = 3
+
+cantidad_cartas = 4
 
 class Mazo():
     def __init__(self):
-        self._mazo_cartas = []
+        self._cartas = []
         self.armar_mazo(cantidad_cartas)
 
     @property
-    def mazo_cartas(self):
-        return self._mazo_cartas
+    def cartas(self):
+        return self._cartas
     
-    @mazo_cartas.setter
+    @cartas.setter
     def mazo_cartas(self,mazo_cartas_nuevo):
-        self._mazo_cartas = mazo_cartas_nuevo
+        self._cartas = mazo_cartas_nuevo
 
     def armar_mazo(self,cant_cartas):
         for i in range(cant_cartas):
             valor_carta = random.randint (-10,10)
-            carta = Carta(valor_carta+i-i)
-            self._mazo_cartas.append(carta)
+            carta = Carta(valor_carta)
+            self._cartas.append(carta)
 
     def sacar_carta(self):
-        if len(self.mazo_cartas) > 0:
-            return self.mazo_cartas.pop()
+        if len(self._cartas) > 0:
+            return self._cartas.pop()
         else:
             return None
