@@ -1,7 +1,7 @@
 import random
 from carta import Carta
 
-cantidad_cartas = 4
+cantidad_cartas = 10
 
 class Mazo():
     def __init__(self):
