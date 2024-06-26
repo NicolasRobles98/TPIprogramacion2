@@ -1,7 +1,7 @@
 import random
 from carta import Carta
 
-cantidad_cartas = 10
+cantidad_cartas = 10 #Modificar la cantidad de cartas para testear
 
 class Mazo():
     def __init__(self):
@@ -18,7 +18,7 @@ class Mazo():
 
     def armar_mazo(self,cant_cartas):
         for i in range(cant_cartas):
-            valor_carta = random.randint (-10,10)
+            valor_carta = random.randint (-10,10) #Modificar el intervalo para testear el empate
             carta = Carta(valor_carta)
             self._cartas.append(carta)
 

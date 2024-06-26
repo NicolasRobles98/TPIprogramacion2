@@ -27,7 +27,7 @@ class Juego():
 
                         if accion == "2":
                             print(f"{jugador.nombre} ha decidido retirarse del juego.")
-                            # self.retirar_jugador(jugador)
+                            # self.retirar_jugador(jugador)                                     # Dejamos comentado el cambio que nos bugueo el juego
                             jugador.retirado = True
                             jugadores = self._jugadores
                             if len(jugadores) == 1:
