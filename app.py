@@ -5,8 +5,8 @@ print("\n-------------BIENVENIDO AL JUEGO DE CARTAS---------------- \n")
 juego = Juego()
 incorrecto = True
 while incorrecto:
-    num_jugadores = int(input("Ingresa el número de jugadores: "))
-    if num_jugadores > 0 :
+    num_jugadores = int(input("Ingresa el número de jugadores, mínimo 2 jugadores: "))
+    if num_jugadores > 1 :
         incorrecto = False
         for i in range(num_jugadores):
             nombre = input(f"Ingresa el nombre del jugador {i + 1}: ")
